@@ -1,0 +1,160 @@
+site_name: Documentación Productos IoT
+site_description: Documentación técnica profesional para productos electrónicos IoT
+site_author: Equipo de Ingeniería Electrónica
+site_url: https://tu-empresa.github.io/documentacion/
+
+# Configuración del repositorio
+repo_url: https://github.com/tu-empresa/documentacion-publica
+repo_name: documentacion-publica
+edit_uri: edit/main/docs/
+
+# Tema Material
+theme:
+  name: material
+  locale: es
+  language: es
+  
+  # Paleta de colores industrial (azul/gris)
+  palette:
+    # Modo Claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    
+    # Modo Oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light-blue
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  
+  # Características del tema
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.action.view
+    - content.action.edit
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  
+  # Iconografía FontAwesome
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/lightbulb
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/xmark
+      danger: fontawesome/solid/fire
+      bug: fontawesome/solid/bug
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  
+  # Fuentes personalizadas
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - es
+        - en
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+  - toc
+
+# Extensiones Markdown
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_libreoffice: false
+      auto_title: true
+      linenums: false
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tablist
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Navegación
+nav:
+  - Inicio: index.md
+  - Productos:
+    - Seeed Studio XIAO ESP32C3: productos/xiao-esp32c3.md
+  - Guías:
+    - Primeros Pasos: guias/primeros-pasos.md
+  - Referencia:
+    - FAQ: referencia/faq.md
+
+# Extra
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tu-empresa
+      name: GitHub de la empresa
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/tu-empresa
+      name: LinkedIn
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Reemplazar con tu Google Analytics ID
+
+# Copyright
+copyright: Copyright &copy; 2026 - Tu Empresa de Ingeniería Electrónica. Todos los derechos reservados.
