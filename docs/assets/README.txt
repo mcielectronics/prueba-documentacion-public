@@ -5,3 +5,5 @@ Coloca aquí las imágenes:
 - Conexiones ejemplos RpiZeroBoard → conexiones_ejemplos.png
 
 Origen: /home/fernando/Documents/Desarrollos/pruebas documentación github/Documentación tarjetas Paul/Fotos/Rpi Zero IO/
+
+TODO: Corregir ejemplos
